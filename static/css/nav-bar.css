@@ -2,10 +2,27 @@
     font-family: 'Daum';
     src: url('../fonts/Daum.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'valorant';
+    src: url('../fonts/valorant.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'akira expanded';
+    src: url('../fonts/akira_expanded.otf') format('opentype');
+}
+
+:root {
+    --title-color: rgb(149, 248, 193);
+    --nav-link-color: white;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(20, 20, 20);
+}
 
 nav {
     align-items: center;
-    background-color: gray;
     border-radius: 10px;
     display: flex;
     font-family: Verdana;
@@ -13,46 +30,102 @@ nav {
     justify-content: space-between;
     margin: auto;
     margin-top: 1em;
-    width: 80%;
+    width: 99%;
+    padding: 0.5em;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
-#left-nav a, #right-nav {
-    color: white;
+nav * {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#left-nav, #right-nav {
     display: flex;
-    padding: 10px;
+    color: var(--nav-link-color);
+}
+
+#right-nav * {
+    margin: 0em 1em;
     text-decoration: none;
+    font-family: 'daum';
+    color: var(--nav-link-color);
+    font-size: 1.5rem;
+}
+
+#left-nav {
+    align-items: center; 
 }
 
 #left-nav a{
-    margin-left: 1em;
-}
-
-#left-nav p {
-    padding-top: 1em;
-    margin: 0;
-}
-
-#right-nav {
-    gap: 20px;
-    margin-right: 1em;
-}
-
-#right-nav a {
-    color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 8px;
-    padding: 0 5px
-}
-
-#right-nav a:hover {
-    background-color: darkgray; 
+    border-right: 3px solid white;
+    padding: 0px 0.5em;
 }
 
 #Title {
-    margin: 0;   
+    color: var(--title-color);
+    font-family: 'valorant';
+    font-size: 2.5em;
+    margin: 0em;
+    transform: translateY(0.08em);
+    user-select: none;
+}
+
+#left-nav-accessory-title {
+    margin-left: 0.5em;
+}
+
+#Subtitle-0, p {
+    margin: 0em;
+    line-height: 0.7;
+}
+
+#Subtitle-0 {
+    font-family: 'akira expanded';
+    font-size: 1.5em;
+    color: var(--nav-link-color);
+}
+
+#Subtitle-1 {
+    font-size: 0.5em;
+    color: var(--nav-link-color);
+}
+
+#Flask-txt {
+    font-family: 'Daum';
+    font-size: 2em;
+    color: var(--nav-link-color);
+}
+
+#right-nav * {
+    
+    
+}
+
+#about, #projects, #contact {
+    border: 2px;
+    padding: 0.2em 0.5em;
+    margin: 0em;
+}
+
+#about:hover, #projects:hover {
+    /* background-color: rgba(207, 207, 207, 0.15); */
+    border-radius: 5px;
+    backdrop-filter: contrast(200%);
 }
 
 #contact {
-    margin-left: 1em;
+    border-color: solid var(--title-color);
+    border-radius: 5px;
+    background-color: var(--title-color);
+    margin-left: 1.5em;
+    margin-right: 0.5em;
+    
+}
+
+#contact:hover {
+    background-color: rgba(70, 177, 118, 0.8);
+    backdrop-filter: contrast(200%);
 }
